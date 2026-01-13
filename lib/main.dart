@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Learnify',
-      initialRoute: isOnboarded ? AppRoutes.home : AppRoutes.onboarding,
+      initialRoute: isOnboarded ? AppRoutes.main : AppRoutes.onboarding,
       getPages: AppPages.pages,
     );
   }

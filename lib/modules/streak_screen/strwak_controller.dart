@@ -1,37 +1,39 @@
 import 'package:get/get.dart';
 import 'package:trogon_learning_app/app/services/api_services.dart';
+import 'package:trogon_learning_app/modules/streak_screen/streak_model/streak_model.dart';
 
 class StreakController extends GetxController {
-  var isLoading = true.obs;
-  var streakDays = <int>[].obs;
-  var errorMessage = ''.obs;
+  final isLoading = true.obs;
+  final errorMessage = ''.obs;
+
+  final streak = Rxn<StreakModel>();
 
   @override
   void onInit() {
-    fetchStreak();
     super.onInit();
+    fetchStreak();
   }
 
   Future<void> fetchStreak() async {
     try {
       isLoading(true);
-      errorMessage.value = '';
+      errorMessage('');
 
       final response = await ApiService.get('streak.php');
 
-      if (response.data != null && response.data['days'] != null) {
-        streakDays.value = List<int>.from(response.data['days']);
+      if (response.data != null) {
+        streak.value = StreakModel.fromJson(response.data);
       } else {
-        streakDays.clear();
+        errorMessage('No streak data');
       }
     } catch (e) {
-      errorMessage.value = 'Failed to load streak';
+      errorMessage('Failed to load streak');
     } finally {
       isLoading(false);
     }
   }
 
-  bool isActiveDay(int day) {
-    return streakDays.contains(day);
-  }
+  /// Helpers (clean & readable)
+  bool isDayCompleted(StreakDay day) => day.isCompleted;
+  bool isCurrentDay(StreakDay day) => day.isCurrent;
 }

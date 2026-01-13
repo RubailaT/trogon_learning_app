@@ -104,9 +104,8 @@ class PopularCoursesSection extends StatelessWidget {
               itemCount: courses.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
-                childAspectRatio: 0.78,
+                childAspectRatio: 0.75,
               ),
               itemBuilder: (_, index) {
                 return PopularCourseCard(course: courses[index], onTap: () {});

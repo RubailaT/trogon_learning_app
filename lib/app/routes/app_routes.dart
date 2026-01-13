@@ -1,6 +1,6 @@
-abstract class AppRoutes {
+class AppRoutes {
   static const onboarding = '/onboarding';
-  static const home = '/home';
-  static const video = '/video';
+  static const main = '/main';
+  static const video = '/video-player';
   static const streak = '/streak';
 }

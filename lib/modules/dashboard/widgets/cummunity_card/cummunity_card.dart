@@ -33,7 +33,7 @@ class CommunityCard extends StatelessWidget {
           SizedBox(height: 16),
           CommunityFooter(),
           SizedBox(height: 16),
-          JoinDiscussionButton(),
+          // JoinDiscussionButton(),
         ],
       ),
     );

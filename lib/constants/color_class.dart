@@ -7,7 +7,8 @@ class ColorClass {
   static const Color primaryThemeColor = Color(0xff491B6D);
   static const Color orangeColor = Color(0xffFDB918);
   static const Color yellowBase = Color(0xffFDB918);
-
+  static const Color cyanBase = Color(0xff00B8D9);
+  static const Color cyanLight = Color(0xffB2F8FF);
   static const Color primaryBase = Color(0xff00ABBC);
 
   static const Color gradientBlue1 = Color(0xFF2E5F87);

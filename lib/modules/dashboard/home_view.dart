@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trogon_learning_app/constants/color_class.dart';
 import 'package:trogon_learning_app/modules/dashboard/widgets/active_course_card/active_course_card.dart';
+import 'package:trogon_learning_app/modules/dashboard/widgets/cummunity_card/cummunity_card.dart';
+import 'package:trogon_learning_app/modules/dashboard/widgets/help_support/help_support_section.dart';
 import 'package:trogon_learning_app/modules/dashboard/widgets/hero_banner.dart';
 import 'package:trogon_learning_app/modules/dashboard/widgets/home_header.dart';
 import 'package:trogon_learning_app/modules/dashboard/widgets/live_section_card.dart';
@@ -42,12 +44,17 @@ class HomeView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                HomeHeader(home: home),
-                HeroBanners(banners: home.heroBanners),
+                HomeHeader(home: home, banners: home.heroBanners),
+                SizedBox(height: home.heroBanners.isNotEmpty ? 100 : 16),
                 ActiveCourseCard(course: home.activeCourse),
+                SizedBox(height: 24),
                 PopularCoursesSection(home: home, controller: controller),
                 LiveSessionCard(home: home),
+                SizedBox(height: 24),
                 TestimonialsSection(),
+                CommunityCard(),
+
+                HelpSupportSection(),
               ],
             ),
           );
