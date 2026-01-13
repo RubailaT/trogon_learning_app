@@ -102,6 +102,7 @@ class LiveSessionCard extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               decoration: BoxDecoration(
+                color: ColorClass.white,
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: ColorClass.yellowBase, width: 1.5),
               ),

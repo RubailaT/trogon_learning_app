@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:trogon_learning_app/constants/color_class.dart';
 import 'package:trogon_learning_app/constants/textstyle_class.dart';
 import 'package:trogon_learning_app/modules/streak_screen/streak_model/streak_model.dart';
-import 'package:trogon_learning_app/modules/streak_screen/strwak_controller.dart';
+import 'package:trogon_learning_app/modules/streak_screen/streak_controller.dart';
 import 'package:trogon_learning_app/modules/streak_screen/widgets/path_painter.dart';
 
 class StreakScreen extends StatelessWidget {
