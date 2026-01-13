@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const String primaryFontName = 'SF Pro';
-const String caveat = 'Caveat';
+const String primaryFontName = 'Poppins';
+// const String caveat = 'Caveat';
 
 class TextStyleClass {
   static const double textHeight = 1.3;
@@ -53,13 +53,13 @@ class TextStyleClass {
     fontSize: size,
   );
 
-  static TextStyle caveat700(double size, Color color) {
-    return TextStyle(
-      fontFamily: caveat,
-      fontWeight: FontWeight.w700,
-      color: color,
-      height: textHeight,
-      fontSize: size,
-    );
-  }
+  // static TextStyle caveat700(double size, Color color) {
+  //   return TextStyle(
+  //     fontFamily: caveat,
+  //     fontWeight: FontWeight.w700,
+  //     color: color,
+  //     height: textHeight,
+  //     fontSize: size,
+  //   );
+  // }
 }
