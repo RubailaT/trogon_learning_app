@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:trogon_learning_app/modules/dashboard/model/home_model.dart';
+import 'package:trogon_learning_app/modules/video_player_screen/model/video_model.dart';
 
 class ApiService {
   static final Dio _dio = Dio(
@@ -23,6 +24,17 @@ class ApiService {
       return HomeModel.fromJson(response.data);
     } else {
       throw Exception('Home API failed');
+    }
+  }
+
+  // Video Details API
+  static Future<VideoListResponse> fetchVideoDetails() async {
+    final response = await _dio.get('video_details.php');
+
+    if (response.statusCode == 200 && response.data != null) {
+      return VideoListResponse.fromJson(response.data);
+    } else {
+      throw Exception('Video Details API failed');
     }
   }
 }

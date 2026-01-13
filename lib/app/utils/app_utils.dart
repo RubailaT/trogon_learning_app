@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trogon_learning_app/constants/color_class.dart';
@@ -20,7 +21,7 @@ class AppUtils {
 
   // Loader
   static Widget loading() {
-    return const Center(child: CircularProgressIndicator());
+    return const Center(child: CupertinoActivityIndicator());
   }
 
   // Empty state

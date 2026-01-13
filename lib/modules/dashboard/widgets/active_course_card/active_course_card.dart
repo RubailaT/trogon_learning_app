@@ -93,14 +93,8 @@ class _CourseInfo extends StatelessWidget {
             ActionButton(
               title: 'Continue >>>',
               onTap: () {
-                final currentVideo = course.currentVideo;
-
-                if (currentVideo == null || currentVideo.videoUrl.isEmpty) {
-                  Get.snackbar('Error', 'No video available for this course');
-                  return;
-                }
-
-                Get.toNamed(AppRoutes.video, arguments: currentVideo.videoUrl);
+                // Navigate to video screen
+                Get.toNamed(AppRoutes.video);
               },
             ),
 

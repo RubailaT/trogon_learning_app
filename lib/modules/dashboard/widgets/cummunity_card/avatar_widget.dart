@@ -15,11 +15,13 @@ class CommunityAvatar extends StatelessWidget {
         height: 28,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
+          color: ColorClass.primaryBase.withOpacity(0.2),
           border: Border.all(color: ColorClass.white, width: 2),
-          image: const DecorationImage(
-            image: AssetImage('assets/images/dpUser.png'),
-            fit: BoxFit.cover,
-          ),
+        ),
+        child: const Icon(
+          Icons.person,
+          size: 16,
+          color: ColorClass.primaryBase,
         ),
       ),
     );
